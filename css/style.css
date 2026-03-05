@@ -1,3 +1,41 @@
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(135deg,#0f0f0f,#1a1a1a);
+}
+
+.hero h1{
+font-size:64px;
+letter-spacing:3px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:600px;
+color:#bbb;
+margin-bottom:30px;
+}
+
+.hero-button{
+padding:12px 28px;
+background:#ffffff;
+color:#000;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+transition:0.2s;
+}
+
+.hero-button:hover{
+transform:translateY(-2px);
+background:#ddd;
+}
+
 *{
 margin:0;
 padding:0;
