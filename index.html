@@ -3,233 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kiddowhy | Portfolio</title>
+  <meta name="description" content="Kiddowhy — portfolio of interactive hardware, games, and custom electronic systems.">
+  <title>Kiddowhy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <div class="scanlines" aria-hidden="true"></div>
-  <div class="grid-bg" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <a href="#" class="logo">
-      <span class="logo-bracket">[</span>KIDDOWHY<span class="logo-bracket">]</span>
-    </a>
-    <nav class="site-nav">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul class="nav-list">
+      <li>
+        <a href="#work" class="nav-link nav-link-active" data-view="work">Work</a>
+      </li>
+      <li>
+        <a href="#about" class="nav-link" data-view="about">About Me</a>
+      </li>
+    </ul>
+    <button class="nav-menu-btn" aria-label="Open menu" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
     </button>
-  </header>
+  </nav>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="hero-tag">// SYSTEM ONLINE</p>
-        <h1>
-          <span class="hero-line">Kiddowhy</span>
+  <div class="mobile-nav" hidden>
+    <div class="mobile-nav-body">
+      <a href="#work" class="mobile-nav-link mobile-nav-link-active" data-view="work">Work</a>
+      <a href="#about" class="mobile-nav-link" data-view="about">About Me</a>
+    </div>
+  </div>
+
+  <div id="work-view" class="page-view page-view-active">
+    <section class="hero">
+      <canvas id="particles" class="particles" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <h1 class="hero-heading">
+          Hi! I am <strong>Kiddowhy</strong>.
         </h1>
-        <p class="hero-subtitle">
-          Engineer building interactive hardware, games, and custom electronic systems
+        <p class="hero-lead">
+          I build <strong>interactive hardware</strong>, games, and custom electronic systems
           at the intersection of code, circuits, and mechanical design.
         </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-ghost">Initialize Contact</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-value">08+</span>
-            <span class="stat-label">Core Systems</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value">3D</span>
-            <span class="stat-label">Fabrication</span>
-          </div>
-          <div class="stat">
-            <span class="stat-value">∞</span>
-            <span class="stat-label">Iterations</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="orbit-ring orbit-ring-1"></div>
-        <div class="orbit-ring orbit-ring-2"></div>
-        <div class="orbit-ring orbit-ring-3"></div>
-        <div class="core-glow"></div>
+        <p class="hero-lead">
+          Check out my <strong>work</strong> below.
+        </p>
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="section-header">
-        <span class="section-index">01</span>
-        <h2>Projects</h2>
-        <p class="section-desc">Deployed systems and experimental builds</p>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-visual project-visual-esp">
-            <div class="project-icon">
-              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <rect x="12" y="20" width="40" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
-                <path d="M20 28h24M20 36h16" stroke="currentColor" stroke-width="2"/>
-                <circle cx="44" cy="36" r="3" fill="currentColor"/>
-              </svg>
+    <section class="projects-section" aria-label="Projects">
+      <div class="project-posts">
+        <a href="#" class="project-link">
+          <article class="project-preview">
+            <div class="project-image project-image-esp" aria-hidden="true"></div>
+            <div class="project-preview-hoverover">
+              <h2 class="project-hover-title">ESP32 System</h2>
+              <p class="project-hover-tags">Embedded | Electronics | IoT | Wireless</p>
             </div>
-          </div>
-          <div class="project-body">
-            <span class="project-tag">Embedded</span>
-            <h3>ESP32 System</h3>
-            <p>Wireless communication and embedded control using ESP32 microcontrollers for real-time sensor networks.</p>
-            <a href="#" class="project-link">Access Module →</a>
-          </div>
-        </article>
+          </article>
+        </a>
 
-        <article class="project-card">
-          <div class="project-visual project-visual-print">
-            <div class="project-icon">
-              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <path d="M16 24h32v28H16z" stroke="currentColor" stroke-width="2"/>
-                <path d="M24 24V16h16v8" stroke="currentColor" stroke-width="2"/>
-                <path d="M24 40h16" stroke="currentColor" stroke-width="2"/>
-              </svg>
+        <a href="#" class="project-link">
+          <article class="project-preview">
+            <div class="project-image project-image-print" aria-hidden="true"></div>
+            <div class="project-preview-hoverover">
+              <h2 class="project-hover-title">3D Printing</h2>
+              <p class="project-hover-tags">Fabrication | CAD | Prototypes | Design</p>
             </div>
-          </div>
-          <div class="project-body">
-            <span class="project-tag">Fabrication</span>
-            <h3>3D Printing</h3>
-            <p>Custom functional parts and product prototypes engineered for durability and precise mechanical fit.</p>
-            <a href="#" class="project-link">Access Module →</a>
-          </div>
-        </article>
+          </article>
+        </a>
 
-        <article class="project-card">
-          <div class="project-visual project-visual-game">
-            <div class="project-icon">
-              <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
-                <rect x="14" y="22" width="36" height="24" rx="4" stroke="currentColor" stroke-width="2"/>
-                <circle cx="26" cy="34" r="4" stroke="currentColor" stroke-width="2"/>
-                <path d="M38 30v8M34 34h8" stroke="currentColor" stroke-width="2"/>
-              </svg>
+        <a href="projects/game-development" class="project-link">
+          <article class="project-preview">
+            <div class="project-image project-image-game" aria-hidden="true"></div>
+            <div class="project-preview-hoverover">
+              <h2 class="project-hover-title">Game Development</h2>
+              <p class="project-hover-tags">Unity | C# | Game Design | Interactive</p>
             </div>
-          </div>
-          <div class="project-body">
-            <span class="project-tag">Interactive</span>
-            <h3>Game Development</h3>
-            <p>Unity-based gameplay systems and interactive experiences with responsive mechanics and polished UX.</p>
-            <a href="projects/game-development" class="project-link">Access Module →</a>
-          </div>
-        </article>
+          </article>
+        </a>
       </div>
     </section>
+  </div>
 
-    <section id="skills" class="section">
-      <div class="section-header">
-        <span class="section-index">02</span>
-        <h2>Skills</h2>
-        <p class="section-desc">Technical stack and fabrication capabilities</p>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-card">
-          <span class="skill-name">Unity</span>
-          <div class="skill-bar"><span style="width: 90%"></span></div>
-        </div>
-        <div class="skill-card">
-          <span class="skill-name">C#</span>
-          <div class="skill-bar"><span style="width: 88%"></span></div>
-        </div>
-        <div class="skill-card">
-          <span class="skill-name">ESP32</span>
-          <div class="skill-bar"><span style="width: 85%"></span></div>
-        </div>
-        <div class="skill-card">
-          <span class="skill-name">Electronics</span>
-          <div class="skill-bar"><span style="width: 82%"></span></div>
-        </div>
-        <div class="skill-card">
-          <span class="skill-name">3D Printing</span>
-          <div class="skill-bar"><span style="width: 92%"></span></div>
-        </div>
-        <div class="skill-card">
-          <span class="skill-name">CAD Design</span>
-          <div class="skill-bar"><span style="width: 87%"></span></div>
-        </div>
-        <div class="skill-card">
-          <span class="skill-name">Game Design</span>
-          <div class="skill-bar"><span style="width: 86%"></span></div>
-        </div>
-        <div class="skill-card">
-          <span class="skill-name">Embedded Systems</span>
-          <div class="skill-bar"><span style="width: 84%"></span></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="section-header">
-        <span class="section-index">03</span>
-        <h2>About</h2>
-        <p class="section-desc">Origin story and operating philosophy</p>
-      </div>
-
-      <div class="about-panel">
-        <div class="terminal">
-          <div class="terminal-header">
-            <span class="terminal-dot"></span>
-            <span class="terminal-dot"></span>
-            <span class="terminal-dot"></span>
-            <span class="terminal-title">bio.sys — read only</span>
-          </div>
-          <div class="terminal-body">
-            <p><span class="prompt">$</span> cat profile.txt</p>
-            <p class="terminal-output">
-              I build interactive systems combining software, electronics, and mechanical design.
-              My work spans game development, ESP32 embedded platforms, and functional 3D-printed
-              hardware — always iterating toward systems that feel alive and responsive.
-            </p>
-            <p><span class="prompt">$</span> status --mission</p>
-            <p class="terminal-output accent">Bridging digital logic with physical form.</p>
-            <p class="cursor-line"><span class="prompt">$</span> <span class="blink">_</span></p>
+  <div id="about-view" class="page-view" hidden>
+    <section class="about-section">
+      <div class="about-aboutme">
+        <div class="about-visual">
+          <div class="about-image" aria-hidden="true">
+            <span class="about-avatar">K</span>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="section-header">
-        <span class="section-index">04</span>
-        <h2>Contact</h2>
-        <p class="section-desc">Establish a secure channel</p>
-      </div>
-
-      <div class="contact-panel">
-        <div class="contact-card">
-          <span class="contact-label">Primary Uplink</span>
-          <a href="mailto:contact@kiddowhy.com" class="contact-email">contact@kiddowhy.com</a>
-          <p class="contact-note">Response latency: typically within 48 hours</p>
-        </div>
-        <div class="contact-status">
-          <span class="status-indicator"></span>
-          <span>Channel open — awaiting transmission</span>
+        <div class="about-text">
+          <p>
+            I build interactive systems combining software, electronics, and mechanical design.
+            My work includes game development, ESP32 embedded platforms, and functional 3D-printed
+            hardware — always iterating toward systems that feel alive and responsive.
+          </p>
+          <p>
+            From wireless sensor networks to Unity gameplay systems and precision-fabricated parts,
+            I enjoy projects where digital logic meets physical form.
+          </p>
         </div>
       </div>
+
+      <div class="about-explore">
+        <h2 class="about-explore-heading">Skills &amp; Tools</h2>
+        <div class="skills-tags">
+          <span class="skill-tag">Unity</span>
+          <span class="skill-tag">C#</span>
+          <span class="skill-tag">ESP32</span>
+          <span class="skill-tag">Electronics</span>
+          <span class="skill-tag">3D Printing</span>
+          <span class="skill-tag">CAD Design</span>
+          <span class="skill-tag">Game Design</span>
+          <span class="skill-tag">Embedded Systems</span>
+        </div>
+      </div>
+
+      <div class="about-contact">
+        <a href="mailto:contact@kiddowhy.com" class="contact-chip">contact@kiddowhy.com</a>
+      </div>
     </section>
-  </main>
+  </div>
 
   <footer class="site-footer">
-    <p>© 2026 Kiddowhy — All systems nominal</p>
-    <p class="footer-code">BUILD v2.0 // DARK_SCI_FI</p>
+    <p class="footer-greeting">Always happy to chat!</p>
+    <div class="footer-links">
+      <a href="mailto:contact@kiddowhy.com" class="footer-link">mail</a>
+      <a href="https://github.com/kiddowhy" class="footer-link" rel="noopener noreferrer">github</a>
+    </div>
+    <p class="footer-copy">© 2026 Kiddowhy</p>
   </footer>
 
   <script src="js/main.js"></script>
